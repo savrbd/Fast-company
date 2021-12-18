@@ -14,6 +14,7 @@ const App = () => {
             <NavBar />
             <Switch>
                 <Route path="/login/:type?" component={Login} />
+
                 <Route
                     path="/users/:userId/edit"
                     render={(props) => <UserChangePageForm {...props} />}
@@ -23,6 +24,7 @@ const App = () => {
                     render={(props) => <UserPage {...props} />}
                 />
                 <Route path="/users" component={UsersListPage} />
+
                 <Route path="/" component={Main} />
                 <Route path="/404" component={NotFound} />
                 <Redirect to="/404" />
